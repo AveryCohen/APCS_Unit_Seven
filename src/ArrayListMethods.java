@@ -3,8 +3,22 @@ import java.util.Scanner;
 
 public class ArrayListMethods {
 
-    /*
+//    /*
     public static ArrayList<Integer> numberList() {
+        ArrayList<Integer> numberList = new ArrayList<Integer>();
+       numberList.add(0);
+       System.out.println(numberList());
+       numberList.add(-5);
+       System.out.println(numberList);
+       numberList.add(7);
+       System.out.println(numberList);
+        numberList.add(12);
+        System.out.println(numberList);
+        numberList.add(-1);
+        System.out.println(numberList);
+        numberList.add(3, 10);
+
+       System.out.println(numberList.size());
 
 
     }
