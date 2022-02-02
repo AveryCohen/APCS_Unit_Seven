@@ -22,7 +22,6 @@ public class TraversingArrayLists {
 
     public static String createList(ArrayList<String> states) {
 
-        states = getStates();
         String list = states.get(0);
         for (int i=1; i < states.size(); i++) {
             list += " -> " + states.get(i);
