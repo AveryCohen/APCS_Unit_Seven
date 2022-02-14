@@ -1,8 +1,5 @@
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.io.IOError;
-import java.io.IOException;
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -37,6 +34,15 @@ public class ScrabbleHelper {
                 min = mid + 1;
         }
         return false;
+    }
+    public ArrayList<String> findMatches(String pattern) {
+        ArrayList<String> matches = new ArrayList<>();
+        for (String a :wordList) {
+            if (a.indexOf(pattern) != -1) {
+                matches.add(a);
+            }
+        }
+        return matches;
     }
 
 
