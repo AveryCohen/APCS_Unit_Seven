@@ -6,6 +6,9 @@ public class ScrabbleDriver {
     public static void main(String[] args) throws FileNotFoundException {
         ScrabbleHelper scrabbleHax = new ScrabbleHelper();
         Scanner scan = new Scanner(System.in);
+        ArrayList<String> matches = scrabbleHax.findMatches("boo");
+        scrabbleHax.sortWords(matches);
+        System.out.println(matches);
         while (true) {
             System.out.print("Enter a word to test: ");
             String input = scan.nextLine();

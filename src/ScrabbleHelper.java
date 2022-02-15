@@ -44,7 +44,19 @@ public class ScrabbleHelper {
         }
         return matches;
     }
+    public void sortWords(ArrayList<String> matches) {
+        for (int j=1; j<matches.size(); j++) {
+            String tempS = matches.get(j);
+            int temp = matches.get(j).length();
+            int i =j-1;
+            while ((i>=0) && temp < matches.get(i).length()) {
+                matches.set(i+1, matches.get(i));
+                i--;
+            }
+            matches.set(i+1, tempS);
+        }
+    }
+    }
 
 
-}
 
