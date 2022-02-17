@@ -58,15 +58,14 @@ public class ScrabbleHelper {
     }
     public ArrayList<String> possibleCombinations(String allTiles) {
         ArrayList<String> wordOptions = new ArrayList<>();
-        int counter = 0;
+        ArrayList<Character> tiles = new ArrayList<>();
         for (int i = 0; i<wordList.size(); i++) {
-            String tempWord = wordList.get(i);
-            ArrayList<Character> tiles = new ArrayList<>();
                 boolean canMakeWord= true;
-            for (int j = 0; j< allTiles.length(); j++) {
+                String tempWord = wordList.get(i);
+            for (int j = 0; j< allTiles.length()-1; j++) {
                 tiles.add(allTiles.charAt(j));
                 Character letter= tiles.get(j);
-                if(tempWord.contains(letter)){
+                if(tempWord.contains("" + letter)) {
                     tiles.remove((Character) letter);
                 }
                 else{
