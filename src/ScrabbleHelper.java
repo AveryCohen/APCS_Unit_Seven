@@ -56,6 +56,29 @@ public class ScrabbleHelper {
             matches.set(i+1, tempS);
         }
     }
+    public ArrayList<String> possibleCombinations(String allTiles) {
+        ArrayList<String> wordOptions = new ArrayList<>();
+        int counter = 0;
+        for (int i = 0; i<wordList.size(); i++) {
+            String tempWord = wordList.get(i);
+            ArrayList<Character> tiles = new ArrayList<>();
+                boolean canMakeWord= true;
+            for (int j = 0; j< allTiles.length(); j++) {
+                tiles.add(allTiles.charAt(j));
+                Character letter= tiles.get(j);
+                if(tempWord.contains(letter)){
+                    tiles.remove((Character) letter);
+                }
+                else{
+                    canMakeWord=false;
+                }
+                if(canMakeWord=true){
+                    wordOptions.add(tempWord);
+                }
+            }
+        }
+        return wordOptions;
+    }
     }
 
 

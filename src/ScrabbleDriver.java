@@ -9,6 +9,8 @@ public class ScrabbleDriver {
         ArrayList<String> matches = scrabbleHax.findMatches("boo");
         scrabbleHax.sortWords(matches);
         System.out.println(matches);
+        String myTiles = "boobaai";
+        System.out.println(scrabbleHax.possibleCombinations(myTiles));
         while (true) {
             System.out.print("Enter a word to test: ");
             String input = scan.nextLine();
